@@ -1,0 +1,22 @@
+%YAML:1.0
+
+NvDCF:
+  # [Genel Ayarlar]
+  maxTargetsPerStream: 20
+  filterLr: 0.1
+  filterQ: 2.0  # Arttırıldı: Hızlı hareketlerde sapmaya izin ver
+  filterR: 0.5
+
+  # [Görsel Takip]
+  useColorNames: 1
+  useHog: 1
+  useHighPrecision: 1
+
+  # [ID Koruma - KRİTİK AYARLAR]
+  minMatchingScore: 0.3        # Çok düşürdük: Benzerlik azalsa bile ID kopmasın
+  maxShadowTrackingAge: 120    # 4 saniye boyunca oyuncu kaybolsa bile ID'yi tut (Occlusion için)
+  probationAge: 3              # Daha çabuk ID ver
+  minTrackingConfidenceDuringInactive: 0.1 # Neredeyse 0: Kayıpken güven arama
+
+  # [Arama Alanı]
+  searchRegionScale: 4.0       # Depar atan oyuncuyu kaçırmamak için geniş alan tara

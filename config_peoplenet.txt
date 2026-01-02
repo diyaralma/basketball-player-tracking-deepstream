@@ -1,0 +1,22 @@
+[property]
+gpu-id=0
+net-scale-factor=0.0039215697906911373
+onnx-file=./models/peoplenet/resnet34_peoplenet.onnx
+model-engine-file=./models/peoplenet/resnet34_peoplenet.onnx_b1_gpu0_fp32.engine
+labelfile-path=./labels_peoplenet.txt
+infer-dims=3;544;960
+batch-size=1
+process-mode=1
+model-color-format=0
+network-mode=0
+num-detected-classes=3
+interval=0
+gie-unique-id=1
+output-blob-names=output_bbox/BiasAdd:0;output_cov/Sigmoid:0
+# Cluster-mode 1 (DBSCAN) PeopleNet için daha stabildir
+cluster-mode=1
+
+[class-attrs-all]
+pre-cluster-threshold=0.4
+eps=0.2
+minBoxes=1

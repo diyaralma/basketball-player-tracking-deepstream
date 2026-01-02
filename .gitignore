@@ -1,0 +1,27 @@
+# Sanal Ortam
+venv_basket/
+venv/
+env/
+
+# Gereksiz Build ve Derleme Dosyalari
+build/
+__pycache__/
+*.pyc
+*.so
+pyds.so
+
+# Buyuk Video Dosyalari
+*.mp4
+*.h264
+*.avi
+
+# Deepstream Model ve Engine Dosyalari (Hata verenler bunlar)
+*.engine
+models/peoplenet/*.engine
+
+# IDE Ayarlari
+.idea/
+.vscode/
+
+# Eger deepstream_python_apps kutuphane ise gonderme:
+deepstream_python_apps/

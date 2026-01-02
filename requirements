@@ -1,0 +1,4 @@
+GObject
+pyds>=1.1.0
+opencv-python
+numpy
